@@ -73,7 +73,6 @@
 		B3154D4D194F3DA4005BEC42 /* QuickLink */ = {
 			isa = PBXGroup;
 			children = (
-				B3154D6B194F3E23005BEC42 /* Views */,
 				B3154D50194F3DA4005BEC42 /* AppDelegate.swift */,
 				B3154D55194F3DA4005BEC42 /* Images.xcassets */,
 				B3154D52194F3DA4005BEC42 /* QuickLink.xcdatamodeld */,
@@ -105,13 +104,6 @@
 				B3154D60194F3DA4005BEC42 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B3154D6B194F3E23005BEC42 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = QuickLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -329,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = QuickLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -389,6 +383,7 @@
 				B3154D67194F3DA4005BEC42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3154D68194F3DA4005BEC42 /* Build configuration list for PBXNativeTarget "QuickLinkTests" */ = {
 			isa = XCConfigurationList;
@@ -397,6 +392,7 @@
 				B3154D6A194F3DA4005BEC42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
