@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B313687D1954155F00485EBF /* CustomTabViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313687C1954155F00485EBF /* CustomTabViewControl.swift */; };
 		B3154D51194F3DA4005BEC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3154D50194F3DA4005BEC42 /* AppDelegate.swift */; };
 		B3154D54194F3DA4005BEC42 /* QuickLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3154D52194F3DA4005BEC42 /* QuickLink.xcdatamodeld */; };
 		B3154D56194F3DA4005BEC42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3154D55194F3DA4005BEC42 /* Images.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B313687C1954155F00485EBF /* CustomTabViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabViewControl.swift; sourceTree = "<group>"; };
 		B3154D4B194F3DA4005BEC42 /* QuickLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3154D4F194F3DA4005BEC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3154D50194F3DA4005BEC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B313687B1954155F00485EBF /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B313687C1954155F00485EBF /* CustomTabViewControl.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		B3154D42194F3DA4005BEC42 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		B3154D6B194F3E23005BEC42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B313687B1954155F00485EBF /* CustomView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3154D51194F3DA4005BEC42 /* AppDelegate.swift in Sources */,
+				B313687D1954155F00485EBF /* CustomTabViewControl.swift in Sources */,
 				B3154D54194F3DA4005BEC42 /* QuickLink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +401,7 @@
 				B3154D67194F3DA4005BEC42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3154D68194F3DA4005BEC42 /* Build configuration list for PBXNativeTarget "QuickLinkTests" */ = {
 			isa = XCConfigurationList;
@@ -397,6 +410,7 @@
 				B3154D6A194F3DA4005BEC42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
