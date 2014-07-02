@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
+        
+        var tabBarViewController = CustomTabBarController(nibName:nil,  bundle: nil);
+//        var navigationViewController = UINavigationController(rootViewController: mainViewController)
+        self.window!.rootViewController = tabBarViewController;
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         return true

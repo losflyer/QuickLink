@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195929821963F9890023F629 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195929811963F9890023F629 /* CustomTabBarController.swift */; };
+		19C04A74195847D8006B850B /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C04A6E195847D8006B850B /* libMobClickLibrary.a */; };
 		B3154D51194F3DA4005BEC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3154D50194F3DA4005BEC42 /* AppDelegate.swift */; };
 		B3154D54194F3DA4005BEC42 /* QuickLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3154D52194F3DA4005BEC42 /* QuickLink.xcdatamodeld */; };
 		B3154D56194F3DA4005BEC42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3154D55194F3DA4005BEC42 /* Images.xcassets */; };
@@ -24,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		195929811963F9890023F629 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		19C04A6E195847D8006B850B /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		19C04A6F195847D8006B850B /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		B3154D4B194F3DA4005BEC42 /* QuickLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3154D4F194F3DA4005BEC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3154D50194F3DA4005BEC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C04A74195847D8006B850B /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C04A6B195847D8006B850B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		19C04A6C195847D8006B850B /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				19C04A6D195847D8006B850B /* Umeng */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		19C04A6D195847D8006B850B /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				19C04A6E195847D8006B850B /* libMobClickLibrary.a */,
+				19C04A6F195847D8006B850B /* MobClick.h */,
+			);
+			path = Umeng;
+			sourceTree = "<group>";
+		};
+		19C04A70195847D8006B850B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19C04A71195847D8006B850B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19C04A72195847D8006B850B /* CustomView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19C04A72195847D8006B850B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				195929811963F9890023F629 /* CustomTabBarController.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		B3154D42194F3DA4005BEC42 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +126,10 @@
 		B3154D4D194F3DA4005BEC42 /* QuickLink */ = {
 			isa = PBXGroup;
 			children = (
+				19C04A6B195847D8006B850B /* Controls */,
+				19C04A6C195847D8006B850B /* Dependencies */,
+				19C04A70195847D8006B850B /* Models */,
+				19C04A71195847D8006B850B /* Views */,
 				B3154D50194F3DA4005BEC42 /* AppDelegate.swift */,
 				B3154D55194F3DA4005BEC42 /* Images.xcassets */,
 				B3154D52194F3DA4005BEC42 /* QuickLink.xcdatamodeld */,
@@ -205,6 +262,7 @@
 			files = (
 				B3154D51194F3DA4005BEC42 /* AppDelegate.swift in Sources */,
 				B3154D54194F3DA4005BEC42 /* QuickLink.xcdatamodeld in Sources */,
+				195929821963F9890023F629 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +370,10 @@
 				INFOPLIST_FILE = QuickLink/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLink/Dependencies/Umeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -324,6 +386,10 @@
 				INFOPLIST_FILE = QuickLink/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLink/Dependencies/Umeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
