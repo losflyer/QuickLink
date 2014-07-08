@@ -1,5 +1,5 @@
 //
-//  YH_SystemStart.h
+//  YH_HttpEngine.h
 //  YH_FRAME
 //
 //  Created by Leo on 14-5-23.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YH_SystemStart : NSObject
-//系统启动
-+(BOOL)SystemStart;
+@interface HttpEngine : NSObject
+
 @end

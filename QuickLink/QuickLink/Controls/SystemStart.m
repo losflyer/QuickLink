@@ -6,17 +6,17 @@
 //  Copyright (c) 2014年 YOHO. All rights reserved.
 //
 
-#import "YH_SystemStart.h"
+#import "SystemStart.h"
 
-@implementation YH_SystemStart
+@implementation SystemStart
 #pragma mark - Start
 //系统启动 (这个方法无特殊情况请不要修改， 如果增加启动函数，
 //请在 SystemStartBySync/SystemStartByAsync 中添加
 +(BOOL)SystemStart
 {
-    [YH_SystemStart SystemStartBySync];
+    [SystemStart SystemStartBySync];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [YH_SystemStart SystemStartByAsync];
+        [SystemStart SystemStartByAsync];
     });
     return YES;
 }

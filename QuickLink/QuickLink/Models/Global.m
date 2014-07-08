@@ -6,14 +6,14 @@
 //  Copyright (c) 2014年 YOHO. All rights reserved.
 //
 
-#import "YH_Global.h"
+#import "Global.h"
 
-@implementation YH_Global
-+ (YH_Global *)sharedInstance
+@implementation Global
++ (Global *)sharedInstance
 {
-    static YH_Global *sharedGlobalInstance = nil;
+    static Global *sharedGlobalInstance = nil;
     static dispatch_once_t predicate; dispatch_once(&predicate, ^{
-        sharedGlobalInstance = [[YH_Global alloc] init];
+        sharedGlobalInstance = [[Global alloc] init];
     });
     return sharedGlobalInstance;
 }
