@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "YH_RootViewController_iPhone.h"
+
 
 @implementation AppDelegate
 
@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /*
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -28,7 +29,8 @@
     
     self.window.rootViewController = rootViewController;
 
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];*/
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     return YES;
 }
 
