@@ -7,9 +7,13 @@
 //
 
 #import "YH_HomeViewController.h"
-#import "UIViewController+ScrollingNavbar.h"
-@interface YH_HomeViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+#import "UIViewController+NJKFullScreenSupport.h"
+
+
+@interface YH_HomeViewController () <UITableViewDataSource, UITableViewDelegate,  NJKScrollFullscreenDelegate>
+
 @property (strong, nonatomic) NSArray* data;
+@property (nonatomic) NJKScrollFullScreen *scrollProxy;
 @end
 
 @implementation YH_HomeViewController
@@ -29,10 +33,24 @@
     
     self.data = @[@"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content"];
     [self.navigationController setTitle:@"root"];
-    // Do any additional setup after loading the view.
-    [self.callRecordTableView setDelegate:self];
+ 
 	[self.callRecordTableView setDataSource:self];
-    [self followScrollView:self.callRecordTableView];
+    
+    
+    _scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self]; // UIScrollViewDelegate and UITableViewDelegate methods proxy to ViewController
+    self.callRecordTableView.delegate = (id)_scrollProxy; // cast for surpress incompatible warnings
+    _scrollProxy.delegate = self;
+    
+//      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetBars) name:UIApplicationWillEnterForegroundNotification object:nil]; // resume bars when back to forground from other apps
+    
+    if (!IS_RUNNING_IOS7) {
+        // support full screen on iOS 6
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+        self.navigationController.toolbar.barStyle = UIBarStyleBlackTranslucent;
+    }
+        [self buttonsSetDefaulePosition];
+   
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,23 +62,18 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
-	[self showNavBarAnimated:NO];
+//	[self showNavBarAnimated:NO];
+ 
 }
 
-#pragma mark - nav + scroll
-- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+
+- (void)dealloc
 {
-	// This enables the user to scroll down the navbar by tapping the status bar.
-	[self performSelector:@selector(showNavbar) withObject:nil afterDelay:0.1];
-	
-	return YES;
+    self.callRecordTableView.delegate = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    return YES;
-}
-
+#pragma mark - Table Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return [self.data count];
@@ -88,39 +101,133 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Action
 
-- (void)buttonJumpAnimation:(UIView*) jumpView{
-    
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    
-    CGPoint point = jumpView.center;
-    
-    if (point.y==240) {
-        springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, -230)];
-    }
-    else{
-        springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, 240)];
-    }
-    
-    //弹性值
-    springAnimation.springBounciness = 20.0;
-    //弹性速度
-    springAnimation.springSpeed = 20.0;
-    
-    [jumpView pop_addAnimation:springAnimation forKey:@"changeposition"];
-    
-}
 
 
 - (IBAction)leftButtonClick : (id)sender
 {
-    UIButton *btn = (UIButton *) sender;
-    [self buttonJumpAnimation:btn];
+    //    UIButton *btn = (UIButton *) sender;
+    //    [self buttonJumpAnimation:btn];
 }
 - (IBAction)rightButtonClick : (id)sender
 {
-    UIButton *btn = (UIButton *) sender;
-    [self buttonJumpAnimation:btn];
+    //    UIButton *btn = (UIButton *) sender;
+    //    [self buttonJumpAnimation:btn];
 }
 
+#pragma mark - Button Animation
+- (void)buttonJumpAnimation{
+    [self leftButtonJump];
+    [self rightButtonJump];
+}
+
+-(void)leftButtonJump
+{
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    
+    CGPoint point =  self.leftButton.center;
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 60)];
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    [self.leftButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+
+}
+
+-(void)rightButtonJump
+{
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    
+    CGPoint point =  self.rightButton.center;
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 60)];
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    [self.rightButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+}
+
+- (void)buttonFallAnimation{
+    [self leftButtonFall];
+    [self rightButtonFall];
+}
+
+
+-(void)leftButtonFall
+{
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    
+    CGPoint point =  self.leftButton.center;
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + 60)];
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    [self.leftButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+    
+}
+
+-(void)rightButtonFall
+{
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    
+    CGPoint point =  self.rightButton.center;
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + 60)];
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    [self.rightButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+}
+
+
+
+-(void)buttonsSetDefaulePosition
+{
+    self.leftButton.bottom = self.view.bottom - 20;
+    self.rightButton.bottom = self.view.bottom - 20;
+}
+
+
+-(void)buttonsJump
+{
+    
+//    [self buttonsSetDefaulePosition];
+    [self buttonJumpAnimation];
+}
+
+
+-(void)buttonsFall
+{
+    
+    [self buttonFallAnimation];
+}
+
+
+#pragma mark - ScrollNavigationDelegate
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+    
+}
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy
+{
+    [self hideNavigationBar:YES];
+    [self buttonsFall];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollDown:(NJKScrollFullScreen *)proxy
+{
+    [self showNavigationBar:YES];
+    [self buttonsJump];
+}
 @end

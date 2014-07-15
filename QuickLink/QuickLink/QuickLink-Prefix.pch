@@ -14,5 +14,14 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+#import "UIView+Frame.h"
 #import "POP.h"
+
+
+#endif
+
+#if __IPHONE_7_0 && __IPHONE_OS_VERSION_MAX_ALLOWED >=  __IPHONE_7_0
+#define IS_RUNNING_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#else
+#define IS_RUNNING_IOS7 NO
 #endif

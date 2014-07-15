@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NJKScrollFullScreen.h"
 @interface YH_HomeViewController : UIViewController
 @property (weak, nonatomic)  IBOutlet UIButton * leftButton;
 @property (weak, nonatomic)  IBOutlet UIButton * rightButton;

@@ -32,7 +32,6 @@
 		B37C63C4197429460001404D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C6353197429460001404D /* AFURLRequestSerialization.m */; };
 		B37C63C5197429460001404D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C6355197429460001404D /* AFURLResponseSerialization.m */; };
 		B37C63C6197429460001404D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C6357197429460001404D /* AFURLSessionManager.m */; };
-		B37C63C7197429460001404D /* UIViewController+ScrollingNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C635A197429460001404D /* UIViewController+ScrollingNavbar.m */; };
 		B37C63C8197429460001404D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B37C635C197429460001404D /* InfoPlist.strings */; };
 		B37C63C9197429460001404D /* pop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B37C635E197429460001404D /* pop-Info.plist */; };
 		B37C63CA197429460001404D /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = B37C6363197429460001404D /* POPAnimatableProperty.mm */; };
@@ -66,6 +65,18 @@
 		B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C63B0197429460001404D /* YH_NavigationViewController.m */; };
 		B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C63B3197429460001404D /* YH_HomeViewController.m */; };
 		B37C63EB197429460001404D /* QuickLinkMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37C63B7197429460001404D /* QuickLinkMain.storyboard */; };
+		B389A9AA1975618300F85A0E /* NJKScrollFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */; };
+		B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A91975618300F85A0E /* UIViewController+NJKFullScreenSupport.m */; };
+		B389A9C7197569AD00F85A0E /* FAAnimationBounces.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9AF197569AD00F85A0E /* FAAnimationBounces.m */; };
+		B389A9C8197569AD00F85A0E /* FAAnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9B1197569AD00F85A0E /* FAAnimationGroup.m */; };
+		B389A9C9197569AD00F85A0E /* FAAnimationShake.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9B3197569AD00F85A0E /* FAAnimationShake.m */; };
+		B389A9CA197569AD00F85A0E /* FAAnimationZoomIn.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9B5197569AD00F85A0E /* FAAnimationZoomIn.m */; };
+		B389A9CB197569AD00F85A0E /* FAAnimationZoomOut.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9B7197569AD00F85A0E /* FAAnimationZoomOut.m */; };
+		B389A9CC197569AD00F85A0E /* FAAnimationButtonScale.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9BA197569AD00F85A0E /* FAAnimationButtonScale.m */; };
+		B389A9CD197569AD00F85A0E /* FastAnimiationUitls.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9BE197569AD00F85A0E /* FastAnimiationUitls.m */; };
+		B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */; };
+		B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */; };
+		B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +131,6 @@
 		B37C6355197429460001404D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		B37C6356197429460001404D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		B37C6357197429460001404D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		B37C6359197429460001404D /* UIViewController+ScrollingNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ScrollingNavbar.h"; sourceTree = "<group>"; };
-		B37C635A197429460001404D /* UIViewController+ScrollingNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ScrollingNavbar.m"; sourceTree = "<group>"; };
 		B37C635D197429460001404D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B37C635E197429460001404D /* pop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-Info.plist"; sourceTree = "<group>"; };
 		B37C635F197429460001404D /* pop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pop-Prefix.pch"; sourceTree = "<group>"; };
@@ -200,6 +209,33 @@
 		B37C63B3197429460001404D /* YH_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_HomeViewController.m; sourceTree = "<group>"; };
 		B37C63B7197429460001404D /* QuickLinkMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuickLinkMain.storyboard; sourceTree = "<group>"; };
 		B37C63EE19742B1E0001404D /* QuickLink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuickLink-Info.plist"; sourceTree = "<group>"; };
+		B389A9A61975618300F85A0E /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
+		B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
+		B389A9A81975618300F85A0E /* UIViewController+NJKFullScreenSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJKFullScreenSupport.h"; sourceTree = "<group>"; };
+		B389A9A91975618300F85A0E /* UIViewController+NJKFullScreenSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJKFullScreenSupport.m"; sourceTree = "<group>"; };
+		B389A9AE197569AD00F85A0E /* FAAnimationBounces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationBounces.h; sourceTree = "<group>"; };
+		B389A9AF197569AD00F85A0E /* FAAnimationBounces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationBounces.m; sourceTree = "<group>"; };
+		B389A9B0197569AD00F85A0E /* FAAnimationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationGroup.h; sourceTree = "<group>"; };
+		B389A9B1197569AD00F85A0E /* FAAnimationGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationGroup.m; sourceTree = "<group>"; };
+		B389A9B2197569AD00F85A0E /* FAAnimationShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationShake.h; sourceTree = "<group>"; };
+		B389A9B3197569AD00F85A0E /* FAAnimationShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationShake.m; sourceTree = "<group>"; };
+		B389A9B4197569AD00F85A0E /* FAAnimationZoomIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationZoomIn.h; sourceTree = "<group>"; };
+		B389A9B5197569AD00F85A0E /* FAAnimationZoomIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationZoomIn.m; sourceTree = "<group>"; };
+		B389A9B6197569AD00F85A0E /* FAAnimationZoomOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationZoomOut.h; sourceTree = "<group>"; };
+		B389A9B7197569AD00F85A0E /* FAAnimationZoomOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationZoomOut.m; sourceTree = "<group>"; };
+		B389A9B9197569AD00F85A0E /* FAAnimationButtonScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAnimationButtonScale.h; sourceTree = "<group>"; };
+		B389A9BA197569AD00F85A0E /* FAAnimationButtonScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAnimationButtonScale.m; sourceTree = "<group>"; };
+		B389A9BC197569AD00F85A0E /* FastAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimationProtocol.h; sourceTree = "<group>"; };
+		B389A9BD197569AD00F85A0E /* FastAnimiationUitls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimiationUitls.h; sourceTree = "<group>"; };
+		B389A9BE197569AD00F85A0E /* FastAnimiationUitls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastAnimiationUitls.m; sourceTree = "<group>"; };
+		B389A9BF197569AD00F85A0E /* NSObject+FastAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FastAnimation.h"; sourceTree = "<group>"; };
+		B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FastAnimation.m"; sourceTree = "<group>"; };
+		B389A9C1197569AD00F85A0E /* UIControl+FastAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+FastAnimation.h"; sourceTree = "<group>"; };
+		B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+FastAnimation.m"; sourceTree = "<group>"; };
+		B389A9C3197569AD00F85A0E /* UIView+FastAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FastAnimation.h"; sourceTree = "<group>"; };
+		B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastAnimation.m"; sourceTree = "<group>"; };
+		B389A9C5197569AD00F85A0E /* FastAnimationWithPop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FastAnimationWithPop-Prefix.pch"; sourceTree = "<group>"; };
+		B389A9C6197569AD00F85A0E /* FastAnimationWithPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimationWithPop.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +324,7 @@
 				B37C63AC197429460001404D /* Views */,
 				B37C63A1197429460001404D /* InfoPlist.strings */,
 				B37C63A3197429460001404D /* Images.xcassets */,
+				B389A9D1197577C500F85A0E /* Resources */,
 				B37C63A4197429460001404D /* main.m */,
 				B37C63A9197429460001404D /* QuickLink-Prefix.pch */,
 				B37C63EE19742B1E0001404D /* QuickLink-Info.plist */,
@@ -316,8 +353,9 @@
 		B37C6343197429460001404D /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
+				B389A9AC197569AD00F85A0E /* FastAnimationWithPop */,
+				B389A9A51975618300F85A0E /* NJKScrollFullScreen */,
 				B37C6344197429460001404D /* AFNetworking */,
-				B37C6358197429460001404D /* Category */,
 				B37C635B197429460001404D /* pop */,
 				B37C6394197429460001404D /* YHUtility */,
 			);
@@ -348,15 +386,6 @@
 				B37C6357197429460001404D /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		B37C6358197429460001404D /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				B37C6359197429460001404D /* UIViewController+ScrollingNavbar.h */,
-				B37C635A197429460001404D /* UIViewController+ScrollingNavbar.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		B37C635B197429460001404D /* pop */ = {
@@ -499,6 +528,78 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B389A9A51975618300F85A0E /* NJKScrollFullScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B389A9A61975618300F85A0E /* NJKScrollFullScreen.h */,
+				B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */,
+				B389A9A81975618300F85A0E /* UIViewController+NJKFullScreenSupport.h */,
+				B389A9A91975618300F85A0E /* UIViewController+NJKFullScreenSupport.m */,
+			);
+			path = NJKScrollFullScreen;
+			sourceTree = "<group>";
+		};
+		B389A9AC197569AD00F85A0E /* FastAnimationWithPop */ = {
+			isa = PBXGroup;
+			children = (
+				B389A9AD197569AD00F85A0E /* Animations */,
+				B389A9B8197569AD00F85A0E /* BindingAnimations */,
+				B389A9BB197569AD00F85A0E /* Core */,
+				B389A9C5197569AD00F85A0E /* FastAnimationWithPop-Prefix.pch */,
+				B389A9C6197569AD00F85A0E /* FastAnimationWithPop.h */,
+			);
+			path = FastAnimationWithPop;
+			sourceTree = "<group>";
+		};
+		B389A9AD197569AD00F85A0E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B389A9AE197569AD00F85A0E /* FAAnimationBounces.h */,
+				B389A9AF197569AD00F85A0E /* FAAnimationBounces.m */,
+				B389A9B0197569AD00F85A0E /* FAAnimationGroup.h */,
+				B389A9B1197569AD00F85A0E /* FAAnimationGroup.m */,
+				B389A9B2197569AD00F85A0E /* FAAnimationShake.h */,
+				B389A9B3197569AD00F85A0E /* FAAnimationShake.m */,
+				B389A9B4197569AD00F85A0E /* FAAnimationZoomIn.h */,
+				B389A9B5197569AD00F85A0E /* FAAnimationZoomIn.m */,
+				B389A9B6197569AD00F85A0E /* FAAnimationZoomOut.h */,
+				B389A9B7197569AD00F85A0E /* FAAnimationZoomOut.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		B389A9B8197569AD00F85A0E /* BindingAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				B389A9B9197569AD00F85A0E /* FAAnimationButtonScale.h */,
+				B389A9BA197569AD00F85A0E /* FAAnimationButtonScale.m */,
+			);
+			path = BindingAnimations;
+			sourceTree = "<group>";
+		};
+		B389A9BB197569AD00F85A0E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B389A9BC197569AD00F85A0E /* FastAnimationProtocol.h */,
+				B389A9BD197569AD00F85A0E /* FastAnimiationUitls.h */,
+				B389A9BE197569AD00F85A0E /* FastAnimiationUitls.m */,
+				B389A9BF197569AD00F85A0E /* NSObject+FastAnimation.h */,
+				B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */,
+				B389A9C1197569AD00F85A0E /* UIControl+FastAnimation.h */,
+				B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */,
+				B389A9C3197569AD00F85A0E /* UIView+FastAnimation.h */,
+				B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B389A9D1197577C500F85A0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -598,13 +699,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37C63C6197429460001404D /* AFURLSessionManager.m in Sources */,
+				B389A9C7197569AD00F85A0E /* FAAnimationBounces.m in Sources */,
 				B37C63DB197429460001404D /* TransformationMatrix.cpp in Sources */,
 				B37C63B8197429460001404D /* AppDelegate.m in Sources */,
+				B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */,
 				B37C63BA197429460001404D /* SystemStart.m in Sources */,
 				B37C63D6197429460001404D /* POPLayerExtras.mm in Sources */,
 				B37C63E6197429460001404D /* QuickLink.xcdatamodeld in Sources */,
 				B37C63C1197429460001404D /* AFNetworkReachabilityManager.m in Sources */,
 				B37C63BB197429460001404D /* YH_FolderContrl.m in Sources */,
+				B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */,
 				B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */,
 				B37C63D1197429460001404D /* POPBasicAnimation.mm in Sources */,
 				B37C63CC197429460001404D /* POPAnimationEvent.mm in Sources */,
@@ -612,28 +716,36 @@
 				B37C63C3197429460001404D /* AFURLConnectionOperation.m in Sources */,
 				B37C63CB197429460001404D /* POPAnimation.mm in Sources */,
 				B37C63D2197429460001404D /* POPCGUtils.mm in Sources */,
+				B389A9C9197569AD00F85A0E /* FAAnimationShake.m in Sources */,
+				B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */,
 				B37C63E4197429460001404D /* Global.m in Sources */,
 				B37C63C0197429460001404D /* AFHTTPSessionManager.m in Sources */,
 				B37C63C4197429460001404D /* AFURLRequestSerialization.m in Sources */,
 				B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */,
 				B37C63DA197429460001404D /* POPVector.mm in Sources */,
+				B389A9CC197569AD00F85A0E /* FAAnimationButtonScale.m in Sources */,
 				B37C63DC197429460001404D /* YH_Log.m in Sources */,
+				B389A9CD197569AD00F85A0E /* FastAnimiationUitls.m in Sources */,
 				B37C63B9197429460001404D /* HttpEngine.m in Sources */,
 				B37C63E0197429460001404D /* UIView+Frame.m in Sources */,
 				B37C63CD197429460001404D /* POPAnimationExtras.mm in Sources */,
 				B37C63D8197429460001404D /* POPPropertyAnimation.mm in Sources */,
 				B37C63BD197429460001404D /* YH_PushMessageEngine.m in Sources */,
 				B37C63DE197429460001404D /* UIActionSheet+Blocks.m in Sources */,
+				B389A9AA1975618300F85A0E /* NJKScrollFullScreen.m in Sources */,
 				B37C63BC197429460001404D /* YH_PersistenceEngine.m in Sources */,
+				B389A9CB197569AD00F85A0E /* FAAnimationZoomOut.m in Sources */,
 				B37C63D5197429460001404D /* POPGeometry.mm in Sources */,
 				B37C63BF197429460001404D /* AFHTTPRequestOperationManager.m in Sources */,
 				B37C63CF197429460001404D /* POPAnimationTracer.mm in Sources */,
 				B37C63CE197429460001404D /* POPAnimationRuntime.mm in Sources */,
-				B37C63C7197429460001404D /* UIViewController+ScrollingNavbar.m in Sources */,
 				B37C63DD197429460001404D /* RIButtonItem.m in Sources */,
+				B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */,
 				B37C63E3197429460001404D /* main.m in Sources */,
 				B37C63D4197429460001404D /* POPDecayAnimation.mm in Sources */,
 				B37C63C2197429460001404D /* AFSecurityPolicy.m in Sources */,
+				B389A9C8197569AD00F85A0E /* FAAnimationGroup.m in Sources */,
+				B389A9CA197569AD00F85A0E /* FAAnimationZoomIn.m in Sources */,
 				B37C63DF197429460001404D /* UIAlertView+Blocks.m in Sources */,
 				B37C63D7197429460001404D /* POPMath.mm in Sources */,
 				B37C63C5197429460001404D /* AFURLResponseSerialization.m in Sources */,
