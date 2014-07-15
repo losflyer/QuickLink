@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.data = @[@"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content"];
-    
+    [self.navigationController setTitle:@"root"];
     // Do any additional setup after loading the view.
     [self.callRecordTableView setDelegate:self];
 	[self.callRecordTableView setDataSource:self];
