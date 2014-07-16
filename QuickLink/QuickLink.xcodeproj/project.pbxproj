@@ -17,6 +17,9 @@
 		19257DA9196BCE0800390C5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19257D8D196BCE0800390C5D /* CoreData.framework */; };
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
+		B348047819764B0B007623FD /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047619764B0A007623FD /* ASOBounceButtonView.m */; };
+		B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047B19765347007623FD /* ASOTwoStateButton.m */; };
+		B348047F19765A6F007623FD /* BounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047E19765A6F007623FD /* BounceButtonView.m */; };
 		B37C63B8197429460001404D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C6337197429460001404D /* AppDelegate.m */; };
 		B37C63B9197429460001404D /* HttpEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C633A197429460001404D /* HttpEngine.m */; };
 		B37C63BA197429460001404D /* SystemStart.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C633C197429460001404D /* SystemStart.m */; };
@@ -100,6 +103,13 @@
 		19257DAE196BCE0800390C5D /* QuickLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickLinkTests-Info.plist"; sourceTree = "<group>"; };
 		19257DB0196BCE0800390C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
+		B348047519764B0A007623FD /* ASOBounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonView.h; sourceTree = "<group>"; };
+		B348047619764B0A007623FD /* ASOBounceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOBounceButtonView.m; sourceTree = "<group>"; };
+		B348047719764B0B007623FD /* ASOBounceButtonViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonViewDelegate.h; sourceTree = "<group>"; };
+		B348047A19765347007623FD /* ASOTwoStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOTwoStateButton.h; sourceTree = "<group>"; };
+		B348047B19765347007623FD /* ASOTwoStateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOTwoStateButton.m; sourceTree = "<group>"; };
+		B348047D19765A6F007623FD /* BounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceButtonView.h; sourceTree = "<group>"; };
+		B348047E19765A6F007623FD /* BounceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceButtonView.m; sourceTree = "<group>"; };
 		B37C6336197429460001404D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B37C6337197429460001404D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B37C6339197429460001404D /* HttpEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpEngine.h; sourceTree = "<group>"; };
@@ -313,6 +323,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B348047419764B0A007623FD /* BounceButton */ = {
+			isa = PBXGroup;
+			children = (
+				B348047519764B0A007623FD /* ASOBounceButtonView.h */,
+				B348047619764B0A007623FD /* ASOBounceButtonView.m */,
+				B348047719764B0B007623FD /* ASOBounceButtonViewDelegate.h */,
+			);
+			path = BounceButton;
+			sourceTree = "<group>";
+		};
+		B348047919765347007623FD /* TwoStateButton */ = {
+			isa = PBXGroup;
+			children = (
+				B348047A19765347007623FD /* ASOTwoStateButton.h */,
+				B348047B19765347007623FD /* ASOTwoStateButton.m */,
+			);
+			path = TwoStateButton;
+			sourceTree = "<group>";
+		};
 		B37C6335197429460001404D /* QuickLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +382,8 @@
 		B37C6343197429460001404D /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
+				B348047919765347007623FD /* TwoStateButton */,
+				B348047419764B0A007623FD /* BounceButton */,
 				B389A9AC197569AD00F85A0E /* FastAnimationWithPop */,
 				B389A9A51975618300F85A0E /* NJKScrollFullScreen */,
 				B37C6344197429460001404D /* AFNetworking */,
@@ -522,6 +553,8 @@
 		B37C63B1197429460001404D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B348047D19765A6F007623FD /* BounceButtonView.h */,
+				B348047E19765A6F007623FD /* BounceButtonView.m */,
 				B37C63B2197429460001404D /* YH_HomeViewController.h */,
 				B37C63B3197429460001404D /* YH_HomeViewController.m */,
 			);
@@ -740,11 +773,13 @@
 				B37C63CF197429460001404D /* POPAnimationTracer.mm in Sources */,
 				B37C63CE197429460001404D /* POPAnimationRuntime.mm in Sources */,
 				B37C63DD197429460001404D /* RIButtonItem.m in Sources */,
+				B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */,
 				B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */,
 				B37C63E3197429460001404D /* main.m in Sources */,
 				B37C63D4197429460001404D /* POPDecayAnimation.mm in Sources */,
 				B37C63C2197429460001404D /* AFSecurityPolicy.m in Sources */,
 				B389A9C8197569AD00F85A0E /* FAAnimationGroup.m in Sources */,
+				B348047F19765A6F007623FD /* BounceButtonView.m in Sources */,
 				B389A9CA197569AD00F85A0E /* FAAnimationZoomIn.m in Sources */,
 				B37C63DF197429460001404D /* UIAlertView+Blocks.m in Sources */,
 				B37C63D7197429460001404D /* POPMath.mm in Sources */,
@@ -752,6 +787,7 @@
 				B37C63BE197429460001404D /* AFHTTPRequestOperation.m in Sources */,
 				B37C63CA197429460001404D /* POPAnimatableProperty.mm in Sources */,
 				B37C63D3197429460001404D /* POPCustomAnimation.mm in Sources */,
+				B348047819764B0B007623FD /* ASOBounceButtonView.m in Sources */,
 				B37C63D9197429460001404D /* POPSpringAnimation.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

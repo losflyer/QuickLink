@@ -8,12 +8,19 @@
 
 #import "YH_HomeViewController.h"
 #import "UIViewController+NJKFullScreenSupport.h"
+#import "ASOTwoStateButton.h"
+#import "ASOBounceButtonViewDelegate.h"
+#import "BounceButtonView.h"
 
-
-@interface YH_HomeViewController () <UITableViewDataSource, UITableViewDelegate,  NJKScrollFullscreenDelegate>
-
+@interface YH_HomeViewController () <UITableViewDataSource, UITableViewDelegate,  NJKScrollFullscreenDelegate, ASOBounceButtonViewDelegate>
+{
+    BOOL isTop;
+}
 @property (strong, nonatomic) NSArray* data;
 @property (nonatomic) NJKScrollFullScreen *scrollProxy;
+
+@property (strong, nonatomic) IBOutlet ASOTwoStateButton *menuButton;
+@property (strong, nonatomic) BounceButtonView *menuItemView;
 @end
 
 @implementation YH_HomeViewController
@@ -48,8 +55,32 @@
         self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         self.navigationController.toolbar.barStyle = UIBarStyleBlackTranslucent;
     }
-        [self buttonsSetDefaulePosition];
-   
+    [self buttonsSetDefaulePosition];
+    
+    isTop = YES;
+    
+    {//jumpMenu
+        // Set the 'menu button'
+        [self.menuButton initAnimationWithFadeEffectEnabled:YES]; // Set to 'NO' to disable Fade effect between its two-state transition
+        
+        // Get the 'menu item view' from storyboard
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
+        UIViewController *menuItemsVC = (UIViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"ExpandMenu"];
+        self.menuItemView = (BounceButtonView *)menuItemsVC.view;
+        
+        NSArray *arrMenuItemButtons = [[NSArray alloc] initWithObjects:self.menuItemView.menuItem1,
+                                       self.menuItemView.menuItem2,
+                                       self.menuItemView.menuItem3,
+                                       self.menuItemView.menuItem4,
+                                       nil]; // Add all of the defined 'menu item button' to 'menu item view'
+        [self.menuItemView addBounceButtons:arrMenuItemButtons];
+        
+        // Set the bouncing distance, speed and fade-out effect duration here. Refer to the ASOBounceButtonView public properties
+        [self.menuItemView setBouncingDistance:[NSNumber numberWithFloat:0.7f]];
+        
+        // Set as delegate of 'menu item view'
+        [self.menuItemView setDelegate:self];
+    }
 
 }
 
@@ -66,6 +97,11 @@
  
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    // Tell 'menu button' position to 'menu item view'
+    [self.menuItemView setAnimationStartFromHere:self.menuButton.frame];
+}
 
 - (void)dealloc
 {
@@ -114,6 +150,21 @@
 {
     //    UIButton *btn = (UIButton *) sender;
     //    [self buttonJumpAnimation:btn];
+}
+
+
+- (IBAction)menuButtonAction:(id)sender
+{
+    if ([sender isOn]) {
+        // Show 'menu item view' and expand its 'menu item button'
+        [self.menuButton addCustomView:self.menuItemView];
+        [self.menuItemView expandWithAnimationStyle:ASOAnimationStyleExpand];
+    }
+    else {
+        // Collapse all 'menu item button' and remove 'menu item view'
+        [self.menuItemView collapseWithAnimationStyle:ASOAnimationStyleExpand];
+        [self.menuButton removeCustomView:self.menuItemView interval:[self.menuItemView.collapsedViewDuration doubleValue]];
+    }
 }
 
 #pragma mark - Button Animation
@@ -195,14 +246,17 @@
 {
     
 //    [self buttonsSetDefaulePosition];
+    if (!isTop)
     [self buttonJumpAnimation];
+    isTop = YES;
 }
 
 
 -(void)buttonsFall
 {
-    
+    if (isTop)
     [self buttonFallAnimation];
+    isTop = NO;
 }
 
 
@@ -229,5 +283,18 @@
 {
     [self showNavigationBar:YES];
     [self buttonsJump];
+}
+
+#pragma mark - Menu item view delegate method
+
+- (void)didSelectBounceButtonAtIndex:(NSUInteger)index
+{
+    // Collapse all 'menu item button' and remove 'menu item view' once a menu item is selected
+    [self.menuButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    
+    // Set your custom action for each selected 'menu item button' here
+    NSString *alertViewTitle = [NSString stringWithFormat:@"Menu Item %x is selected", (short)index];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
 }
 @end
