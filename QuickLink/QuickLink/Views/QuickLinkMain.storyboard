@@ -115,22 +115,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-zw-pqu">
-                                <rect key="frame" x="178" y="217" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13337100669999999" green="0.1601494889" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-2o-nZO">
-                                <rect key="frame" x="138" y="154" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13337100669999999" green="0.1601494889" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4R-Ss-Xgl" customClass="ASOTwoStateButton">
                                 <rect key="frame" x="244" y="432" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -144,22 +128,16 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="l4B-2o-nZO" secondAttribute="trailing" constant="126" id="08H-JD-GS2"/>
                             <constraint firstAttribute="bottom" secondItem="NRY-4X-Hhu" secondAttribute="bottom" constant="153" id="6KC-8p-p75"/>
                             <constraint firstAttribute="trailing" secondItem="Z4R-Ss-Xgl" secondAttribute="trailing" constant="20" id="DV6-sW-9xo"/>
-                            <constraint firstAttribute="trailing" secondItem="1bp-zw-pqu" secondAttribute="trailing" constant="86" id="T33-F0-7La"/>
-                            <constraint firstAttribute="bottom" secondItem="1bp-zw-pqu" secondAttribute="bottom" constant="295" id="Tzp-RD-fbw"/>
                             <constraint firstAttribute="trailing" secondItem="cVp-dX-XQ2" secondAttribute="trailing" constant="57" id="aOg-Tz-AiJ"/>
                             <constraint firstAttribute="bottom" secondItem="Z4R-Ss-Xgl" secondAttribute="bottom" constant="80" id="k5E-Gu-zIO"/>
                             <constraint firstAttribute="bottom" secondItem="cVp-dX-XQ2" secondAttribute="bottom" constant="225" id="tQi-Qc-gVb"/>
-                            <constraint firstAttribute="bottom" secondItem="l4B-2o-nZO" secondAttribute="bottom" constant="358" id="ttS-G1-J2d"/>
                             <constraint firstAttribute="trailing" secondItem="NRY-4X-Hhu" secondAttribute="trailing" constant="37" id="tz6-bd-3Wa"/>
                         </constraints>
                         <connections>
                             <outlet property="menuItem1" destination="NRY-4X-Hhu" id="PqV-nE-lXG"/>
                             <outlet property="menuItem2" destination="cVp-dX-XQ2" id="rJH-2l-X1a"/>
-                            <outlet property="menuItem3" destination="1bp-zw-pqu" id="1eT-QZ-pcr"/>
-                            <outlet property="menuItem4" destination="l4B-2o-nZO" id="iSK-5W-dak"/>
                         </connections>
                     </view>
                 </viewController>

@@ -70,8 +70,7 @@
         
         NSArray *arrMenuItemButtons = [[NSArray alloc] initWithObjects:self.menuItemView.menuItem1,
                                        self.menuItemView.menuItem2,
-                                       self.menuItemView.menuItem3,
-                                       self.menuItemView.menuItem4,
+                                      
                                        nil]; // Add all of the defined 'menu item button' to 'menu item view'
         [self.menuItemView addBounceButtons:arrMenuItemButtons];
         

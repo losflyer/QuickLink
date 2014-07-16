@@ -29,7 +29,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *menuItem1;
 @property (weak, nonatomic) IBOutlet UIButton *menuItem2;
-@property (weak, nonatomic) IBOutlet UIButton *menuItem3;
-@property (weak, nonatomic) IBOutlet UIButton *menuItem4;
+
 
 @end
