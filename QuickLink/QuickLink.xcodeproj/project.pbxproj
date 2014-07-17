@@ -17,6 +17,7 @@
 		19257DA9196BCE0800390C5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19257D8D196BCE0800390C5D /* CoreData.framework */; };
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
+		B32E32791977C52A00C007C4 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32E32781977C52A00C007C4 /* ContactsViewController.m */; };
 		B348047819764B0B007623FD /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047619764B0A007623FD /* ASOBounceButtonView.m */; };
 		B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047B19765347007623FD /* ASOTwoStateButton.m */; };
 		B348047F19765A6F007623FD /* BounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047E19765A6F007623FD /* BounceButtonView.m */; };
@@ -80,6 +81,8 @@
 		B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */; };
 		B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */; };
 		B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */; };
+		B3A802D119780B5F0005178C /* CallRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D019780B5F0005178C /* CallRecordViewController.m */; };
+		B3A802D4197812370005178C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D3197812370005178C /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,8 @@
 		19257DAE196BCE0800390C5D /* QuickLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickLinkTests-Info.plist"; sourceTree = "<group>"; };
 		19257DB0196BCE0800390C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
+		B32E32771977C52A00C007C4 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		B32E32781977C52A00C007C4 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		B348047519764B0A007623FD /* ASOBounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonView.h; sourceTree = "<group>"; };
 		B348047619764B0A007623FD /* ASOBounceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOBounceButtonView.m; sourceTree = "<group>"; };
 		B348047719764B0B007623FD /* ASOBounceButtonViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonViewDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +251,10 @@
 		B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastAnimation.m"; sourceTree = "<group>"; };
 		B389A9C5197569AD00F85A0E /* FastAnimationWithPop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FastAnimationWithPop-Prefix.pch"; sourceTree = "<group>"; };
 		B389A9C6197569AD00F85A0E /* FastAnimationWithPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimationWithPop.h; sourceTree = "<group>"; };
+		B3A802CF19780B5F0005178C /* CallRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordViewController.h; sourceTree = "<group>"; };
+		B3A802D019780B5F0005178C /* CallRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordViewController.m; sourceTree = "<group>"; };
+		B3A802D2197812370005178C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		B3A802D3197812370005178C /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +566,12 @@
 				B348047E19765A6F007623FD /* BounceButtonView.m */,
 				B37C63B2197429460001404D /* YH_HomeViewController.h */,
 				B37C63B3197429460001404D /* YH_HomeViewController.m */,
+				B32E32771977C52A00C007C4 /* ContactsViewController.h */,
+				B32E32781977C52A00C007C4 /* ContactsViewController.m */,
+				B3A802CF19780B5F0005178C /* CallRecordViewController.h */,
+				B3A802D019780B5F0005178C /* CallRecordViewController.m */,
+				B3A802D2197812370005178C /* SettingViewController.h */,
+				B3A802D3197812370005178C /* SettingViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -740,6 +755,7 @@
 				B37C63D6197429460001404D /* POPLayerExtras.mm in Sources */,
 				B37C63E6197429460001404D /* QuickLink.xcdatamodeld in Sources */,
 				B37C63C1197429460001404D /* AFNetworkReachabilityManager.m in Sources */,
+				B32E32791977C52A00C007C4 /* ContactsViewController.m in Sources */,
 				B37C63BB197429460001404D /* YH_FolderContrl.m in Sources */,
 				B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */,
 				B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */,
@@ -753,6 +769,7 @@
 				B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */,
 				B37C63E4197429460001404D /* Global.m in Sources */,
 				B37C63C0197429460001404D /* AFHTTPSessionManager.m in Sources */,
+				B3A802D119780B5F0005178C /* CallRecordViewController.m in Sources */,
 				B37C63C4197429460001404D /* AFURLRequestSerialization.m in Sources */,
 				B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */,
 				B37C63DA197429460001404D /* POPVector.mm in Sources */,
@@ -771,6 +788,7 @@
 				B37C63D5197429460001404D /* POPGeometry.mm in Sources */,
 				B37C63BF197429460001404D /* AFHTTPRequestOperationManager.m in Sources */,
 				B37C63CF197429460001404D /* POPAnimationTracer.mm in Sources */,
+				B3A802D4197812370005178C /* SettingViewController.m in Sources */,
 				B37C63CE197429460001404D /* POPAnimationRuntime.mm in Sources */,
 				B37C63DD197429460001404D /* RIButtonItem.m in Sources */,
 				B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */,

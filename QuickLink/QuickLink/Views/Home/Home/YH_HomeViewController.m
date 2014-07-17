@@ -12,15 +12,25 @@
 #import "ASOBounceButtonViewDelegate.h"
 #import "BounceButtonView.h"
 
-@interface YH_HomeViewController () <UITableViewDataSource, UITableViewDelegate,  NJKScrollFullscreenDelegate, ASOBounceButtonViewDelegate>
+#import "ContactsViewController.h"
+#import "CallRecordViewController.h"
+#import "SettingViewController.h"
+
+@interface YH_HomeViewController () < ASOBounceButtonViewDelegate>
 {
     BOOL isTop;
+    MenuButtonStatus buttonStatus;
 }
-@property (strong, nonatomic) NSArray* data;
-@property (nonatomic) NJKScrollFullScreen *scrollProxy;
+
 
 @property (strong, nonatomic) IBOutlet ASOTwoStateButton *menuButton;
+@property (weak, nonatomic) UIView *currentView;
 @property (strong, nonatomic) BounceButtonView *menuItemView;
+
+
+@property (strong, nonatomic) ContactsViewController* contactVC;
+@property (strong, nonatomic) CallRecordViewController* callRecordVC;
+@property (strong, nonatomic) SettingViewController* setttingVC;
 @end
 
 @implementation YH_HomeViewController
@@ -37,18 +47,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.data = @[@"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content", @"Awesome content", @"Great content", @"Amazing content", @"Ludicrous content"];
     [self.navigationController setTitle:@"root"];
- 
-	[self.callRecordTableView setDataSource:self];
-    
-    
-    _scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self]; // UIScrollViewDelegate and UITableViewDelegate methods proxy to ViewController
-    self.callRecordTableView.delegate = (id)_scrollProxy; // cast for surpress incompatible warnings
-    _scrollProxy.delegate = self;
-    
-//      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetBars) name:UIApplicationWillEnterForegroundNotification object:nil]; // resume bars when back to forground from other apps
+    [self addNewViewToRoot:CALLRECODR_STATUS];
+
     
     if (!IS_RUNNING_IOS7) {
         // support full screen on iOS 6
@@ -68,15 +69,15 @@
         UIViewController *menuItemsVC = (UIViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"ExpandMenu"];
         self.menuItemView = (BounceButtonView *)menuItemsVC.view;
         
-        NSArray *arrMenuItemButtons = [[NSArray alloc] initWithObjects:self.menuItemView.menuItem1,
+        NSArray *arrMenuItemButtons = [[NSArray alloc] initWithObjects:
+                                       self.menuItemView.menuItem1,
                                        self.menuItemView.menuItem2,
-                                      
+                                       self.menuItemView.menuItem3,
                                        nil]; // Add all of the defined 'menu item button' to 'menu item view'
         [self.menuItemView addBounceButtons:arrMenuItemButtons];
         
         // Set the bouncing distance, speed and fade-out effect duration here. Refer to the ASOBounceButtonView public properties
-        [self.menuItemView setBouncingDistance:[NSNumber numberWithFloat:0.7f]];
-        
+        [self.menuItemView setBouncingDistance:[NSNumber numberWithFloat:0.8f]];
         // Set as delegate of 'menu item view'
         [self.menuItemView setDelegate:self];
     }
@@ -104,27 +105,10 @@
 
 - (void)dealloc
 {
-    self.callRecordTableView.delegate = nil;
+//    self.callRecordTableView.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - Table Delegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	return [self.data count];
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Identifier"];
-	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Identifier"];
-	}
-	
-	cell.textLabel.text = self.data[indexPath.row];
-	
-	return cell;
-}
 
 /*
 #pragma mark - Navigation
@@ -138,22 +122,11 @@
 */
 #pragma mark - Action
 
-
-
-- (IBAction)leftButtonClick : (id)sender
-{
-    //    UIButton *btn = (UIButton *) sender;
-    //    [self buttonJumpAnimation:btn];
-}
-- (IBAction)rightButtonClick : (id)sender
-{
-    //    UIButton *btn = (UIButton *) sender;
-    //    [self buttonJumpAnimation:btn];
-}
-
-
 - (IBAction)menuButtonAction:(id)sender
 {
+    if (!isTop) {
+        return;
+    }
     if ([sender isOn]) {
         // Show 'menu item view' and expand its 'menu item button'
         [self.menuButton addCustomView:self.menuItemView];
@@ -166,123 +139,74 @@
     }
 }
 
+
 #pragma mark - Button Animation
 - (void)buttonJumpAnimation{
-    [self leftButtonJump];
-    [self rightButtonJump];
+    [self menuButtonJump];
 }
 
--(void)leftButtonJump
+-(void)menuButtonJump
 {
     POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
     
-    CGPoint point =  self.leftButton.center;
+    CGPoint point =  self.menuButton.center;
     springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 60)];
     //弹性值
     springAnimation.springBounciness = 20.0;
     //弹性速度
     springAnimation.springSpeed = 20.0;
-    [self.leftButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+    [self.menuButton pop_addAnimation:springAnimation forKey:@"changeposition"];
 
-}
-
--(void)rightButtonJump
-{
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    
-    CGPoint point =  self.rightButton.center;
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 60)];
-    //弹性值
-    springAnimation.springBounciness = 20.0;
-    //弹性速度
-    springAnimation.springSpeed = 20.0;
-    [self.rightButton pop_addAnimation:springAnimation forKey:@"changeposition"];
 }
 
 - (void)buttonFallAnimation{
-    [self leftButtonFall];
-    [self rightButtonFall];
+    [self menuButtonFall];
 }
 
 
--(void)leftButtonFall
+-(void)menuButtonFall
 {
     POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
     
-    CGPoint point =  self.leftButton.center;
+    CGPoint point =  self.menuButton.center;
     springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + 60)];
     //弹性值
     springAnimation.springBounciness = 20.0;
     //弹性速度
     springAnimation.springSpeed = 20.0;
-    [self.leftButton pop_addAnimation:springAnimation forKey:@"changeposition"];
+    [self.menuButton pop_addAnimation:springAnimation forKey:@"changeposition"];
     
 }
-
--(void)rightButtonFall
-{
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    
-    CGPoint point =  self.rightButton.center;
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + 60)];
-    //弹性值
-    springAnimation.springBounciness = 20.0;
-    //弹性速度
-    springAnimation.springSpeed = 20.0;
-    [self.rightButton pop_addAnimation:springAnimation forKey:@"changeposition"];
-}
-
 
 
 -(void)buttonsSetDefaulePosition
 {
-    self.leftButton.bottom = self.view.bottom - 20;
-    self.rightButton.bottom = self.view.bottom - 20;
+    self.menuButton.bottom = self.view.bottom - 20;
 }
 
 
 -(void)buttonsJump
 {
     
-//    [self buttonsSetDefaulePosition];
     if (!isTop)
-    [self buttonJumpAnimation];
-    isTop = YES;
+    {
+        [self buttonJumpAnimation];
+        isTop = YES;
+    }
 }
 
 
 -(void)buttonsFall
 {
     if (isTop)
-    [self buttonFallAnimation];
-    isTop = NO;
+    {
+        [self buttonFallAnimation];
+        isTop = NO;
+    }
 }
 
 
-#pragma mark - ScrollNavigationDelegate
 
-- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
-{
-    [self moveNavigtionBar:deltaY animated:YES];
-    
-}
-
-- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
-{
-    [self moveNavigtionBar:deltaY animated:YES];
-}
-
-- (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy
-{
-    [self hideNavigationBar:YES];
-    [self buttonsFall];
-}
-
-- (void)scrollFullScreenScrollViewDidEndDraggingScrollDown:(NJKScrollFullScreen *)proxy
-{
-    [self showNavigationBar:YES];
-    [self buttonsJump];
-}
 
 #pragma mark - Menu item view delegate method
 
@@ -293,7 +217,95 @@
     
     // Set your custom action for each selected 'menu item button' here
     NSString *alertViewTitle = [NSString stringWithFormat:@"Menu Item %x is selected", (short)index];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    [alertView show];
+    if (index != buttonStatus) {
+        [self addNewViewToRoot:index];
+        [self fourth_animations];
+    }
+}
+
+
+-(void)addNewViewToRoot:(MenuButtonStatus)btnStatus
+{
+
+    switch (btnStatus) {
+        case CALLRECODR_STATUS:
+        {
+            [self changeCurrentView:self.callRecordVC];
+        }
+            break;
+        case CONTACTS_STATUS:
+        {
+            [self changeCurrentView:self.contactVC];
+        }
+            break;
+        case SETTING_STATUS:
+        {
+            [self changeCurrentView:self.setttingVC];
+        }
+            break;
+        default:
+        {
+            
+        }
+            break;
+    }
+    buttonStatus = btnStatus;
+}
+-(void)changeCurrentView:(UIViewController*)inVC
+{
+    [self.view insertSubview:inVC.view belowSubview:_menuButton];
+    [_currentView removeFromSuperview];
+    _currentView = inVC.view;
+    
+}
+
+- (void) fourth_animations
+{
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.6f;      
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = @"rippleEffect";  //@"cube" @"moveIn" @"reveal" @"fade"(default) @"pageCurl" @"pageUnCurl" @"suckEffect" @"rippleEffect" @"oglFlip"
+    transition.subtype = kCATransitionFromRight;
+    transition.removedOnCompletion = YES;
+    transition.fillMode = kCAFillModeBackwards;
+    transition.delegate = self;
+    [self.view.layer addAnimation:transition forKey:nil];
+}
+
+
+
+
+#pragma mark - Get
+
+-(ContactsViewController*)contactVC
+{
+    if (!_contactVC) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
+        
+        _contactVC = (ContactsViewController*)[board instantiateViewControllerWithIdentifier:@"ContactViewControllSI"];
+    }
+    return _contactVC;
+}
+
+-(CallRecordViewController*)callRecordVC
+{
+    if (!_callRecordVC) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
+        
+        _callRecordVC = (CallRecordViewController*)[board instantiateViewControllerWithIdentifier:@"CallRecordViewControllerSI"];
+    }
+    return _callRecordVC;
+}
+
+-(SettingViewController*)setttingVC
+{
+    if (!_setttingVC) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
+        
+        _setttingVC = (SettingViewController*)[board instantiateViewControllerWithIdentifier:@"SettingViewControllerSI"];
+    }
+    return _setttingVC;
 }
 @end

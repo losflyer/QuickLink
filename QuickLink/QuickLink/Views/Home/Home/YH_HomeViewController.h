@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "NJKScrollFullScreen.h"
+
+enum {
+    CALLRECODR_STATUS = 0,
+    CONTACTS_STATUS ,
+    SETTING_STATUS ,
+};
+typedef NSUInteger MenuButtonStatus;
+
 @interface YH_HomeViewController : UIViewController
-@property (weak, nonatomic)  IBOutlet UIButton * leftButton;
-@property (weak, nonatomic)  IBOutlet UIButton * rightButton;
-@property (weak, nonatomic)  IBOutlet UITableView * callRecordTableView;
-- (IBAction)leftButtonClick : (id)sender;
-- (IBAction)rightButtonClick : (id)sender;
+
+
+
 @end
