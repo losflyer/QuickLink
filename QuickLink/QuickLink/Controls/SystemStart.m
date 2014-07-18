@@ -24,13 +24,12 @@
 //同步启动
 +(BOOL)SystemStartBySync
 {
-    
-    
+    [SystemStart getContacts];
     return YES;
 }
--(void)getContacts
++(void)getContacts
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"contacts" ofType:@"csv"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"csv"];
     NSError * error;
     NSString *contents = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSArray *contentsArray = [contents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -38,15 +37,17 @@
     for (idx = 0; idx < contentsArray.count; idx++) {
         NSString* currentContent = [contentsArray objectAtIndex:idx];
         NSArray* singleContactArray = [currentContent componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@";"]];
-        [self addDataToDB:singleContactArray];
+        [SystemStart addDataToDB:singleContactArray];
         
         
     }
 }
 
--(void)addDataToDB:(NSArray*)contactArray
++(void)addDataToDB:(NSArray*)contactArray
 {
-    NSManagedObjectContext *context = [self managedObjectContext];
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+   
     
     NSManagedObject *contactInfo = [NSEntityDescription insertNewObjectForEntityForName:@"ContactsEntities" inManagedObjectContext:context];
     [contactInfo setValue:contactArray[0] forKey:@"department"];

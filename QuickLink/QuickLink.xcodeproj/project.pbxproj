@@ -69,6 +69,7 @@
 		B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C63B0197429460001404D /* YH_NavigationViewController.m */; };
 		B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C63B3197429460001404D /* YH_HomeViewController.m */; };
 		B37C63EB197429460001404D /* QuickLinkMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37C63B7197429460001404D /* QuickLinkMain.storyboard */; };
+		B37CBCA319797BF200E7B7C1 /* Contacts.csv in Resources */ = {isa = PBXBuildFile; fileRef = B37CBCA219797BF200E7B7C1 /* Contacts.csv */; };
 		B389A9AA1975618300F85A0E /* NJKScrollFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */; };
 		B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A91975618300F85A0E /* UIViewController+NJKFullScreenSupport.m */; };
 		B389A9C7197569AD00F85A0E /* FAAnimationBounces.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9AF197569AD00F85A0E /* FAAnimationBounces.m */; };
@@ -225,6 +226,7 @@
 		B37C63B3197429460001404D /* YH_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_HomeViewController.m; sourceTree = "<group>"; };
 		B37C63B7197429460001404D /* QuickLinkMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QuickLinkMain.storyboard; path = ../Views/QuickLinkMain.storyboard; sourceTree = "<group>"; };
 		B37C63EE19742B1E0001404D /* QuickLink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuickLink-Info.plist"; sourceTree = "<group>"; };
+		B37CBCA219797BF200E7B7C1 /* Contacts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Contacts.csv; sourceTree = "<group>"; };
 		B389A9A61975618300F85A0E /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
 		B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
 		B389A9A81975618300F85A0E /* UIViewController+NJKFullScreenSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJKFullScreenSupport.h"; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 		B389A9D1197577C500F85A0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B37CBCA219797BF200E7B7C1 /* Contacts.csv */,
 				B37C63B7197429460001404D /* QuickLinkMain.storyboard */,
 				B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */,
 			);
@@ -729,6 +732,7 @@
 				B37C63C9197429460001404D /* pop-Info.plist in Resources */,
 				B37C63E2197429460001404D /* Images.xcassets in Resources */,
 				B37C63EB197429460001404D /* QuickLinkMain.storyboard in Resources */,
+				B37CBCA319797BF200E7B7C1 /* Contacts.csv in Resources */,
 				B37C63E1197429460001404D /* InfoPlist.strings in Resources */,
 				B37C63C8197429460001404D /* InfoPlist.strings in Resources */,
 			);
