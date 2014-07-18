@@ -24,11 +24,43 @@
 //同步启动
 +(BOOL)SystemStartBySync
 {
-
+    
     
     return YES;
 }
+-(void)getContacts
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"contacts" ofType:@"csv"];
+    NSError * error;
+    NSString *contents = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    NSArray *contentsArray = [contents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSInteger idx;
+    for (idx = 0; idx < contentsArray.count; idx++) {
+        NSString* currentContent = [contentsArray objectAtIndex:idx];
+        NSArray* singleContactArray = [currentContent componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@";"]];
+        [self addDataToDB:singleContactArray];
+        
+        
+    }
+}
 
+-(void)addDataToDB:(NSArray*)contactArray
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSManagedObject *contactInfo = [NSEntityDescription insertNewObjectForEntityForName:@"ContactsEntities" inManagedObjectContext:context];
+    [contactInfo setValue:contactArray[0] forKey:@"department"];
+    [contactInfo setValue:contactArray[1] forKey:@"name"];
+    [contactInfo setValue:contactArray[2] forKey:@"number"];
+    
+    
+    
+    NSError *error;
+    if(![context save:&error])
+    {
+        NSLog(@"不能保存：%@",[error localizedDescription]);
+    }
+}
 
 //异步启动
 +(void)SystemStartByAsync
