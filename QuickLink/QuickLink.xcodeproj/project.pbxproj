@@ -70,6 +70,7 @@
 		B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C63B3197429460001404D /* YH_HomeViewController.m */; };
 		B37C63EB197429460001404D /* QuickLinkMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37C63B7197429460001404D /* QuickLinkMain.storyboard */; };
 		B37CBCA319797BF200E7B7C1 /* Contacts.csv in Resources */ = {isa = PBXBuildFile; fileRef = B37CBCA219797BF200E7B7C1 /* Contacts.csv */; };
+		B37CBCA719797F9200E7B7C1 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B37CBCA519797F9200E7B7C1 /* Contacts.xcdatamodeld */; };
 		B389A9AA1975618300F85A0E /* NJKScrollFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */; };
 		B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9A91975618300F85A0E /* UIViewController+NJKFullScreenSupport.m */; };
 		B389A9C7197569AD00F85A0E /* FAAnimationBounces.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9AF197569AD00F85A0E /* FAAnimationBounces.m */; };
@@ -82,7 +83,6 @@
 		B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */; };
 		B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */; };
 		B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */; };
-		B38BAC2D1978B99900693CD0 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */; };
 		B3A802D119780B5F0005178C /* CallRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D019780B5F0005178C /* CallRecordViewController.m */; };
 		B3A802D4197812370005178C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D3197812370005178C /* SettingViewController.m */; };
 /* End PBXBuildFile section */
@@ -227,6 +227,7 @@
 		B37C63B7197429460001404D /* QuickLinkMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QuickLinkMain.storyboard; path = ../Views/QuickLinkMain.storyboard; sourceTree = "<group>"; };
 		B37C63EE19742B1E0001404D /* QuickLink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuickLink-Info.plist"; sourceTree = "<group>"; };
 		B37CBCA219797BF200E7B7C1 /* Contacts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Contacts.csv; sourceTree = "<group>"; };
+		B37CBCA619797F9200E7B7C1 /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
 		B389A9A61975618300F85A0E /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
 		B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
 		B389A9A81975618300F85A0E /* UIViewController+NJKFullScreenSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJKFullScreenSupport.h"; sourceTree = "<group>"; };
@@ -254,7 +255,6 @@
 		B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastAnimation.m"; sourceTree = "<group>"; };
 		B389A9C5197569AD00F85A0E /* FastAnimationWithPop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FastAnimationWithPop-Prefix.pch"; sourceTree = "<group>"; };
 		B389A9C6197569AD00F85A0E /* FastAnimationWithPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimationWithPop.h; sourceTree = "<group>"; };
-		B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
 		B3A802CF19780B5F0005178C /* CallRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordViewController.h; sourceTree = "<group>"; };
 		B3A802D019780B5F0005178C /* CallRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordViewController.m; sourceTree = "<group>"; };
 		B3A802D2197812370005178C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -647,9 +647,9 @@
 		B389A9D1197577C500F85A0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B37CBCA519797F9200E7B7C1 /* Contacts.xcdatamodeld */,
 				B37CBCA219797BF200E7B7C1 /* Contacts.csv */,
 				B37C63B7197429460001404D /* QuickLinkMain.storyboard */,
-				B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -767,7 +767,6 @@
 				B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */,
 				B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */,
 				B37C63D1197429460001404D /* POPBasicAnimation.mm in Sources */,
-				B38BAC2D1978B99900693CD0 /* Contacts.xcdatamodeld in Sources */,
 				B37C63CC197429460001404D /* POPAnimationEvent.mm in Sources */,
 				B37C63D0197429460001404D /* POPAnimator.mm in Sources */,
 				B37C63C3197429460001404D /* AFURLConnectionOperation.m in Sources */,
@@ -779,6 +778,7 @@
 				B37C63C0197429460001404D /* AFHTTPSessionManager.m in Sources */,
 				B3A802D119780B5F0005178C /* CallRecordViewController.m in Sources */,
 				B37C63C4197429460001404D /* AFURLRequestSerialization.m in Sources */,
+				B37CBCA719797F9200E7B7C1 /* Contacts.xcdatamodeld in Sources */,
 				B37C63E8197429460001404D /* YH_HomeViewController.m in Sources */,
 				B37C63DA197429460001404D /* POPVector.mm in Sources */,
 				B389A9CC197569AD00F85A0E /* FAAnimationButtonScale.m in Sources */,
@@ -1055,12 +1055,12 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */ = {
+		B37CBCA519797F9200E7B7C1 /* Contacts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */,
+				B37CBCA619797F9200E7B7C1 /* Contacts.xcdatamodel */,
 			);
-			currentVersion = B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */;
+			currentVersion = B37CBCA619797F9200E7B7C1 /* Contacts.xcdatamodel */;
 			path = Contacts.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
