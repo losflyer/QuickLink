@@ -81,6 +81,7 @@
 		B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C0197569AD00F85A0E /* NSObject+FastAnimation.m */; };
 		B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C2197569AD00F85A0E /* UIControl+FastAnimation.m */; };
 		B389A9D0197569AD00F85A0E /* UIView+FastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */; };
+		B38BAC2D1978B99900693CD0 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */; };
 		B3A802D119780B5F0005178C /* CallRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D019780B5F0005178C /* CallRecordViewController.m */; };
 		B3A802D4197812370005178C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A802D3197812370005178C /* SettingViewController.m */; };
 /* End PBXBuildFile section */
@@ -222,7 +223,7 @@
 		B37C63B0197429460001404D /* YH_NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_NavigationViewController.m; sourceTree = "<group>"; };
 		B37C63B2197429460001404D /* YH_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_HomeViewController.h; sourceTree = "<group>"; };
 		B37C63B3197429460001404D /* YH_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_HomeViewController.m; sourceTree = "<group>"; };
-		B37C63B7197429460001404D /* QuickLinkMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuickLinkMain.storyboard; sourceTree = "<group>"; };
+		B37C63B7197429460001404D /* QuickLinkMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QuickLinkMain.storyboard; path = ../Views/QuickLinkMain.storyboard; sourceTree = "<group>"; };
 		B37C63EE19742B1E0001404D /* QuickLink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuickLink-Info.plist"; sourceTree = "<group>"; };
 		B389A9A61975618300F85A0E /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
 		B389A9A71975618300F85A0E /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
@@ -251,6 +252,7 @@
 		B389A9C4197569AD00F85A0E /* UIView+FastAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastAnimation.m"; sourceTree = "<group>"; };
 		B389A9C5197569AD00F85A0E /* FastAnimationWithPop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FastAnimationWithPop-Prefix.pch"; sourceTree = "<group>"; };
 		B389A9C6197569AD00F85A0E /* FastAnimationWithPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastAnimationWithPop.h; sourceTree = "<group>"; };
+		B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
 		B3A802CF19780B5F0005178C /* CallRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordViewController.h; sourceTree = "<group>"; };
 		B3A802D019780B5F0005178C /* CallRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordViewController.m; sourceTree = "<group>"; };
 		B3A802D2197812370005178C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -536,7 +538,6 @@
 			isa = PBXGroup;
 			children = (
 				B37C63AD197429460001404D /* Home */,
-				B37C63B7197429460001404D /* QuickLinkMain.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -644,6 +645,8 @@
 		B389A9D1197577C500F85A0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B37C63B7197429460001404D /* QuickLinkMain.storyboard */,
+				B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				B389A9CE197569AD00F85A0E /* NSObject+FastAnimation.m in Sources */,
 				B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */,
 				B37C63D1197429460001404D /* POPBasicAnimation.mm in Sources */,
+				B38BAC2D1978B99900693CD0 /* Contacts.xcdatamodeld in Sources */,
 				B37C63CC197429460001404D /* POPAnimationEvent.mm in Sources */,
 				B37C63D0197429460001404D /* POPAnimator.mm in Sources */,
 				B37C63C3197429460001404D /* AFURLConnectionOperation.m in Sources */,
@@ -1044,6 +1048,16 @@
 			);
 			currentVersion = B37C63AB197429460001404D /* QuickLink.xcdatamodel */;
 			path = QuickLink.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B38BAC2B1978B99900693CD0 /* Contacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */,
+			);
+			currentVersion = B38BAC2C1978B99900693CD0 /* Contacts.xcdatamodel */;
+			path = Contacts.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

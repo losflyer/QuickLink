@@ -9,7 +9,8 @@
 #import "ContactsViewController.h"
 
 @interface ContactsViewController ()
-
+@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
 @end
 
 @implementation ContactsViewController
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self initContactsDataBase];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +47,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)initContactsDataBase
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"ContactsEntities" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+//    self.failedBankInfos = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
 
 @end

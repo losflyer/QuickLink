@@ -17,19 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    /*
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    //Caoliu
-  
-    YH_RootViewController_iPhone * rootViewController = [[YH_RootViewController_iPhone alloc] initWithNibName:nil bundle:nil];
-    
-    
-    
-    self.window.rootViewController = rootViewController;
-
-    [self.window makeKeyAndVisible];*/
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     return YES;
 }
