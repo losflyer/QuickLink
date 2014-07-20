@@ -7,8 +7,13 @@
 //
 
 #import "SystemStart.h"
+#import "YH_SetConfig.h"
+#import "SystemConfig.h"
+
 
 @implementation SystemStart
+
+
 #pragma mark - Start
 //系统启动 (这个方法无特殊情况请不要修改， 如果增加启动函数，
 //请在 SystemStartBySync/SystemStartByAsync 中添加
@@ -24,7 +29,13 @@
 //同步启动
 +(BOOL)SystemStartBySync
 {
-    [SystemStart getContacts];
+    [SystemStart processRunTime];
+    [SystemStart handleNumberOfRunning];
+    
+    if ([Global sharedInstance].isFirstRun) {
+        [SystemStart getContacts];
+    }
+    
     return YES;
 }
 +(void)getContacts
@@ -45,15 +56,14 @@
 
 +(void)addDataToDB:(NSArray*)contactArray
 {
+    
+    
     id delegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [delegate managedObjectContext];
-   
-    
     NSManagedObject *contactInfo = [NSEntityDescription insertNewObjectForEntityForName:@"ContactsEntities" inManagedObjectContext:context];
     [contactInfo setValue:contactArray[0] forKey:@"department"];
     [contactInfo setValue:contactArray[1] forKey:@"name"];
     [contactInfo setValue:contactArray[2] forKey:@"number"];
-    
     
     
     NSError *error;
@@ -68,4 +78,30 @@
 {
 
 }
+
+#pragma mark -System method
++ (void)processRunTime
+{
+    NSNumber *runCount = [YH_SetConfig parameterForKey:SYSTEM_CONFIG_THE_NUMBER_OF_RUNNING];
+    
+    if (!runCount || 0 == [runCount intValue])
+    {
+        //log4debug(@"The pushmail application run the first time!");
+        NSLog(@"通讯录应用运行第 1 次");
+        [Global sharedInstance].isFirstRun = YES ;
+    }
+}
+
++(void)handleNumberOfRunning
+{
+    NSNumber *runCount = [YH_SetConfig parameterForKey:SYSTEM_CONFIG_THE_NUMBER_OF_RUNNING];
+    int count = 1;
+    if (runCount)
+    {
+        count = [runCount intValue] + 1;
+    }
+    NSLog(@"通讯录应用运行第 [%d] 次", count);
+    [YH_SetConfig setParameter:[NSNumber numberWithInt:count] forKey:SYSTEM_CONFIG_THE_NUMBER_OF_RUNNING];
+}
+
 @end

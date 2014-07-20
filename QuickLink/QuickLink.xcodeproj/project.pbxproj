@@ -17,6 +17,11 @@
 		19257DA9196BCE0800390C5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19257D8D196BCE0800390C5D /* CoreData.framework */; };
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
+		B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088849197BD62C00A50559 /* YH_SetConfig.m */; };
+		B3088856197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088855197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m */; };
+		B3088859197BEBA400A50559 /* ContactsEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088858197BEBA400A50559 /* ContactsEntities.m */; };
+		B308885D197BF03100A50559 /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B308885B197BF03100A50559 /* ContactsCell.m */; };
+		B308885E197BF03100A50559 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B308885C197BF03100A50559 /* ContactsCell.xib */; };
 		B32E32791977C52A00C007C4 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32E32781977C52A00C007C4 /* ContactsViewController.m */; };
 		B348047819764B0B007623FD /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047619764B0A007623FD /* ASOBounceButtonView.m */; };
 		B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047B19765347007623FD /* ASOTwoStateButton.m */; };
@@ -108,6 +113,16 @@
 		19257DAE196BCE0800390C5D /* QuickLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickLinkTests-Info.plist"; sourceTree = "<group>"; };
 		19257DB0196BCE0800390C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
+		B3088847197BD5BE00A50559 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
+		B3088848197BD62C00A50559 /* YH_SetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_SetConfig.h; sourceTree = "<group>"; };
+		B3088849197BD62C00A50559 /* YH_SetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_SetConfig.m; sourceTree = "<group>"; };
+		B3088854197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SetObjectForFormat.h"; sourceTree = "<group>"; };
+		B3088855197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SetObjectForFormat.m"; sourceTree = "<group>"; };
+		B3088857197BEBA400A50559 /* ContactsEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsEntities.h; sourceTree = "<group>"; };
+		B3088858197BEBA400A50559 /* ContactsEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsEntities.m; sourceTree = "<group>"; };
+		B308885A197BF03100A50559 /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCell.h; sourceTree = "<group>"; };
+		B308885B197BF03100A50559 /* ContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCell.m; sourceTree = "<group>"; };
+		B308885C197BF03100A50559 /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
 		B32E32771977C52A00C007C4 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		B32E32781977C52A00C007C4 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		B348047519764B0A007623FD /* ASOBounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonView.h; sourceTree = "<group>"; };
@@ -360,6 +375,7 @@
 			children = (
 				B37C6336197429460001404D /* AppDelegate.h */,
 				B37C6337197429460001404D /* AppDelegate.m */,
+				B3088847197BD5BE00A50559 /* SystemConfig.h */,
 				B37C6338197429460001404D /* Controls */,
 				B37C6343197429460001404D /* Dependences */,
 				B37C63A5197429460001404D /* Models */,
@@ -508,6 +524,8 @@
 				B37C6396197429460001404D /* YH_Log.h */,
 				B37C6397197429460001404D /* YH_Log.m */,
 				B37C6398197429460001404D /* YHCategory */,
+				B3088848197BD62C00A50559 /* YH_SetConfig.h */,
+				B3088849197BD62C00A50559 /* YH_SetConfig.m */,
 			);
 			path = YHUtility;
 			sourceTree = "<group>";
@@ -523,6 +541,8 @@
 				B37C639E197429460001404D /* UIAlertView+Blocks.m */,
 				B37C639F197429460001404D /* UIView+Frame.h */,
 				B37C63A0197429460001404D /* UIView+Frame.m */,
+				B3088854197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.h */,
+				B3088855197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m */,
 			);
 			path = YHCategory;
 			sourceTree = "<group>";
@@ -532,6 +552,8 @@
 			children = (
 				B37C63A6197429460001404D /* Global.h */,
 				B37C63A7197429460001404D /* Global.m */,
+				B3088857197BEBA400A50559 /* ContactsEntities.h */,
+				B3088858197BEBA400A50559 /* ContactsEntities.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -575,6 +597,9 @@
 				B3A802D019780B5F0005178C /* CallRecordViewController.m */,
 				B3A802D2197812370005178C /* SettingViewController.h */,
 				B3A802D3197812370005178C /* SettingViewController.m */,
+				B308885A197BF03100A50559 /* ContactsCell.h */,
+				B308885B197BF03100A50559 /* ContactsCell.m */,
+				B308885C197BF03100A50559 /* ContactsCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -735,6 +760,7 @@
 				B37CBCA319797BF200E7B7C1 /* Contacts.csv in Resources */,
 				B37C63E1197429460001404D /* InfoPlist.strings in Resources */,
 				B37C63C8197429460001404D /* InfoPlist.strings in Resources */,
+				B308885E197BF03100A50559 /* ContactsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,11 +812,13 @@
 				B389A9CD197569AD00F85A0E /* FastAnimiationUitls.m in Sources */,
 				B37C63B9197429460001404D /* HttpEngine.m in Sources */,
 				B37C63E0197429460001404D /* UIView+Frame.m in Sources */,
+				B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */,
 				B37C63CD197429460001404D /* POPAnimationExtras.mm in Sources */,
 				B37C63D8197429460001404D /* POPPropertyAnimation.mm in Sources */,
 				B37C63BD197429460001404D /* YH_PushMessageEngine.m in Sources */,
 				B37C63DE197429460001404D /* UIActionSheet+Blocks.m in Sources */,
 				B389A9AA1975618300F85A0E /* NJKScrollFullScreen.m in Sources */,
+				B3088856197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m in Sources */,
 				B37C63BC197429460001404D /* YH_PersistenceEngine.m in Sources */,
 				B389A9CB197569AD00F85A0E /* FAAnimationZoomOut.m in Sources */,
 				B37C63D5197429460001404D /* POPGeometry.mm in Sources */,
@@ -799,6 +827,7 @@
 				B3A802D4197812370005178C /* SettingViewController.m in Sources */,
 				B37C63CE197429460001404D /* POPAnimationRuntime.mm in Sources */,
 				B37C63DD197429460001404D /* RIButtonItem.m in Sources */,
+				B3088859197BEBA400A50559 /* ContactsEntities.m in Sources */,
 				B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */,
 				B389A9AB1975618300F85A0E /* UIViewController+NJKFullScreenSupport.m in Sources */,
 				B37C63E3197429460001404D /* main.m in Sources */,
@@ -808,6 +837,7 @@
 				B348047F19765A6F007623FD /* BounceButtonView.m in Sources */,
 				B389A9CA197569AD00F85A0E /* FAAnimationZoomIn.m in Sources */,
 				B37C63DF197429460001404D /* UIAlertView+Blocks.m in Sources */,
+				B308885D197BF03100A50559 /* ContactsCell.m in Sources */,
 				B37C63D7197429460001404D /* POPMath.mm in Sources */,
 				B37C63C5197429460001404D /* AFURLResponseSerialization.m in Sources */,
 				B37C63BE197429460001404D /* AFHTTPRequestOperation.m in Sources */,

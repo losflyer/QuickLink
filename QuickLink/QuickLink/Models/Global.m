@@ -17,4 +17,11 @@
     });
     return sharedGlobalInstance;
 }
+
+-(NSManagedObjectContext*)getCurrentManagedObjectContext
+{
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    return context;
+}
 @end

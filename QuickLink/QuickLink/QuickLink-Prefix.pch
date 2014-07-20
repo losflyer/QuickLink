@@ -16,7 +16,7 @@
     #import <CoreData/CoreData.h>
 #import "UIView+Frame.h"
 #import "POP.h"
-
+#import "Global.h"
 
 #endif
 

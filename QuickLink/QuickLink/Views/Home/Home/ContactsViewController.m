@@ -7,10 +7,17 @@
 //
 
 #import "ContactsViewController.h"
+#import "ContactsEntities.h"
+#import "ContactsCell.h"
 
-@interface ContactsViewController ()
-@property (strong, nonatomic) NSMutableArray *dataArray;
+@interface ContactsViewController () <UITabBarControllerDelegate, UITableViewDataSource>
+{
+    NSString *cellIdentifier;
+}
+@property (strong, nonatomic) NSArray *contactsArray;
+@property (weak,   nonatomic) IBOutlet UITableView *contactsTableView;
 @property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
+
 @end
 
 @implementation ContactsViewController
@@ -29,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initContactsDataBase];
+    cellIdentifier = NSStringFromClass([ContactsCell class]);
+    [self.contactsTableView registerNib:[UINib nibWithNibName:cellIdentifier bundle:nil] forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,11 +60,39 @@
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"ContactsEntities" inManagedObjectContext:_managedObjectContext];
+                                   entityForName:@"ContactsEntities" inManagedObjectContext:[[Global sharedInstance] getCurrentManagedObjectContext]];
+    
+    
     [fetchRequest setEntity:entity];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:NO];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:sort];
     NSError *error;
-//    self.failedBankInfos = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSArray * fetchedObjects = [[[Global sharedInstance] getCurrentManagedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        [NSException raise:@"查询错误" format:@"%@", [error localizedDescription]];
+    }
+    self.contactsArray = [NSArray arrayWithArray:fetchedObjects];
+
 }
+#pragma mark - Table delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"%d",[self.contactsArray count] );
+     return [self.contactsArray count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ContactsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    ContactsEntities *info  = [self.contactsArray objectAtIndex:indexPath.row];
 
-
+    cell.nameLabel.text = info.name;
+    cell.numberLabel.text = info.number;
+    cell.departmentLabel.text = info.department;
+ 
+    return cell;
+}
 @end

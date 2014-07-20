@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Global : NSObject
+
+@property (nonatomic, assign) BOOL isFirstRun;
 + (Global *)sharedInstance;
+-(NSManagedObjectContext*)getCurrentManagedObjectContext;
 @end
