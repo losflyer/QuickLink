@@ -80,6 +80,9 @@
         [self.menuItemView setBouncingDistance:[NSNumber numberWithFloat:0.8f]];
         // Set as delegate of 'menu item view'
         [self.menuItemView setDelegate:self];
+        
+        
+ 
     }
 
 }
@@ -215,10 +218,7 @@
     // Collapse all 'menu item button' and remove 'menu item view' once a menu item is selected
     [self.menuButton sendActionsForControlEvents:UIControlEventTouchUpInside];
     
-    // Set your custom action for each selected 'menu item button' here
-    NSString *alertViewTitle = [NSString stringWithFormat:@"Menu Item %x is selected", (short)index];
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertViewTitle message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//    [alertView show];
+    
     if (index != buttonStatus) {
         [self addNewViewToRoot:index];
         [self fourth_animations];
@@ -284,7 +284,7 @@
     if (!_contactVC) {
         UIStoryboard *board = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
         
-        _contactVC = (ContactsViewController*)[board instantiateViewControllerWithIdentifier:@"ContactViewControllSI"];
+        _contactVC = (ContactsViewController*)[board instantiateViewControllerWithIdentifier:@"ContactViewControllerSI"];
     }
     return _contactVC;
 }
@@ -295,6 +295,7 @@
         UIStoryboard *board = [UIStoryboard storyboardWithName:@"QuickLinkMain" bundle:nil];
         
         _callRecordVC = (CallRecordViewController*)[board instantiateViewControllerWithIdentifier:@"CallRecordViewControllerSI"];
+       
     }
     return _callRecordVC;
 }

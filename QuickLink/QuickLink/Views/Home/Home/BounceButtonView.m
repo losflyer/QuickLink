@@ -32,8 +32,29 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+    }
+
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self.menuItem1 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateNormal];
+        [self.menuItem1 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateSelected];
+        [self.menuItem1 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateHighlighted];
+        
+        [self.menuItem2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [self.menuItem2 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        [self.menuItem2 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+
+        [self.menuItem3 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateNormal];
+        [self.menuItem3 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateSelected];
+        [self.menuItem3 setTitleColor:[UIColor colorWithWhite:1 alpha:1.0] forState:UIControlStateHighlighted];
     }
     return self;
 }
+
 
 @end
