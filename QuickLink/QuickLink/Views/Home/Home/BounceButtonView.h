@@ -24,11 +24,12 @@
 // THE SOFTWARE.
 
 #import "ASOBounceButtonView.h"
+#import "DKCircleButton.h"
 
 @interface BounceButtonView : ASOBounceButtonView
 
-@property (weak, nonatomic) IBOutlet UIButton *menuItem1;
-@property (weak, nonatomic) IBOutlet UIButton *menuItem2;
-@property (weak, nonatomic) IBOutlet UIButton *menuItem3;
+@property (weak, nonatomic) IBOutlet DKCircleButton *menuItem1;
+@property (weak, nonatomic) IBOutlet DKCircleButton *menuItem2;
+@property (weak, nonatomic) IBOutlet DKCircleButton *menuItem3;
 
 @end

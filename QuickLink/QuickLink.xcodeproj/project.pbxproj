@@ -17,6 +17,7 @@
 		19257DA9196BCE0800390C5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19257D8D196BCE0800390C5D /* CoreData.framework */; };
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
+		19B2CA9B197D03FA00FE3838 /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */; };
 		B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088849197BD62C00A50559 /* YH_SetConfig.m */; };
 		B3088856197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088855197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m */; };
 		B3088859197BEBA400A50559 /* ContactsEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088858197BEBA400A50559 /* ContactsEntities.m */; };
@@ -113,6 +114,8 @@
 		19257DAE196BCE0800390C5D /* QuickLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickLinkTests-Info.plist"; sourceTree = "<group>"; };
 		19257DB0196BCE0800390C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
+		19B2CA99197D03FA00FE3838 /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
+		19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
 		B3088847197BD5BE00A50559 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
 		B3088848197BD62C00A50559 /* YH_SetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_SetConfig.h; sourceTree = "<group>"; };
 		B3088849197BD62C00A50559 /* YH_SetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_SetConfig.m; sourceTree = "<group>"; };
@@ -351,6 +354,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		19B2CA98197D03FA00FE3838 /* DKCircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				19B2CA99197D03FA00FE3838 /* DKCircleButton.h */,
+				19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */,
+			);
+			path = DKCircleButton;
+			sourceTree = "<group>";
+		};
 		B348047419764B0A007623FD /* BounceButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +423,7 @@
 		B37C6343197429460001404D /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
+				19B2CA98197D03FA00FE3838 /* DKCircleButton */,
 				B348047919765347007623FD /* TwoStateButton */,
 				B348047419764B0A007623FD /* BounceButton */,
 				B389A9AC197569AD00F85A0E /* FastAnimationWithPop */,
@@ -523,9 +536,9 @@
 				B37C6395197429460001404D /* YH_Header.h */,
 				B37C6396197429460001404D /* YH_Log.h */,
 				B37C6397197429460001404D /* YH_Log.m */,
-				B37C6398197429460001404D /* YHCategory */,
 				B3088848197BD62C00A50559 /* YH_SetConfig.h */,
 				B3088849197BD62C00A50559 /* YH_SetConfig.m */,
+				B37C6398197429460001404D /* YHCategory */,
 			);
 			path = YHUtility;
 			sourceTree = "<group>";
@@ -810,6 +823,7 @@
 				B389A9CC197569AD00F85A0E /* FAAnimationButtonScale.m in Sources */,
 				B37C63DC197429460001404D /* YH_Log.m in Sources */,
 				B389A9CD197569AD00F85A0E /* FastAnimiationUitls.m in Sources */,
+				19B2CA9B197D03FA00FE3838 /* DKCircleButton.m in Sources */,
 				B37C63B9197429460001404D /* HttpEngine.m in Sources */,
 				B37C63E0197429460001404D /* UIView+Frame.m in Sources */,
 				B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */,
