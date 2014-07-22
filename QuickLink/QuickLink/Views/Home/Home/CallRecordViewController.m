@@ -8,7 +8,7 @@
 
 #import "CallRecordViewController.h"
 
-@interface CallRecordViewController ()
+@interface CallRecordViewController() <UITabBarControllerDelegate, UITableViewDataSource>
 
 @end
 
@@ -46,4 +46,20 @@
 }
 */
 
+
+
+#pragma mark - Table delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+   
+    return 0;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+}
 @end

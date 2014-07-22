@@ -18,6 +18,7 @@
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
 		19B2CA9B197D03FA00FE3838 /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */; };
+		19CC04FC197E628B00860DAD /* CallRecordEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CC04FB197E628B00860DAD /* CallRecordEntities.m */; };
 		B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088849197BD62C00A50559 /* YH_SetConfig.m */; };
 		B3088856197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088855197BD97E00A50559 /* NSMutableDictionary+SetObjectForFormat.m */; };
 		B3088859197BEBA400A50559 /* ContactsEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088858197BEBA400A50559 /* ContactsEntities.m */; };
@@ -116,6 +117,8 @@
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
 		19B2CA99197D03FA00FE3838 /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
 		19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
+		19CC04FA197E628B00860DAD /* CallRecordEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordEntities.h; sourceTree = "<group>"; };
+		19CC04FB197E628B00860DAD /* CallRecordEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordEntities.m; sourceTree = "<group>"; };
 		B3088847197BD5BE00A50559 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
 		B3088848197BD62C00A50559 /* YH_SetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_SetConfig.h; sourceTree = "<group>"; };
 		B3088849197BD62C00A50559 /* YH_SetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_SetConfig.m; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				B37C63A7197429460001404D /* Global.m */,
 				B3088857197BEBA400A50559 /* ContactsEntities.h */,
 				B3088858197BEBA400A50559 /* ContactsEntities.m */,
+				19CC04FA197E628B00860DAD /* CallRecordEntities.h */,
+				19CC04FB197E628B00860DAD /* CallRecordEntities.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -807,6 +812,7 @@
 				B37C63E7197429460001404D /* YH_NavigationViewController.m in Sources */,
 				B37C63D1197429460001404D /* POPBasicAnimation.mm in Sources */,
 				B37C63CC197429460001404D /* POPAnimationEvent.mm in Sources */,
+				19CC04FC197E628B00860DAD /* CallRecordEntities.m in Sources */,
 				B37C63D0197429460001404D /* POPAnimator.mm in Sources */,
 				B37C63C3197429460001404D /* AFURLConnectionOperation.m in Sources */,
 				B37C63CB197429460001404D /* POPAnimation.mm in Sources */,

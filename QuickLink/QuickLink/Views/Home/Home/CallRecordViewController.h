@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CallRecordViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITableView * callrecordTable;
 @end

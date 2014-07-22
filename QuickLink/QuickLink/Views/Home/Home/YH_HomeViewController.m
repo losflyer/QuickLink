@@ -16,7 +16,7 @@
 #import "CallRecordViewController.h"
 #import "SettingViewController.h"
 
-@interface YH_HomeViewController () < ASOBounceButtonViewDelegate>
+@interface YH_HomeViewController () < ASOBounceButtonViewDelegate, NJKScrollFullscreenDelegate>
 {
     BOOL isTop;
     MenuButtonStatus buttonStatus;
@@ -31,6 +31,9 @@
 @property (strong, nonatomic) ContactsViewController* contactVC;
 @property (strong, nonatomic) CallRecordViewController* callRecordVC;
 @property (strong, nonatomic) SettingViewController* setttingVC;
+
+
+@property (strong, nonatomic) NJKScrollFullScreen  * scrollProxy;
 @end
 
 @implementation YH_HomeViewController
@@ -59,6 +62,11 @@
     [self buttonsSetDefaulePosition];
     
     isTop = YES;
+    
+    _scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self]; // UIScrollViewDelegate and UITableViewDelegate methods proxy to ViewController
+    self.callRecordVC.callrecordTable.delegate = (id)_scrollProxy;
+//    self.tableView.; // cast for surpress incompatible warnings
+    _scrollProxy.delegate = self;
     
     {//jumpMenu
         // Set the 'menu button'
@@ -275,7 +283,25 @@
 }
 
 
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
 
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy
+{
+    [self hideNavigationBar:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollDown:(NJKScrollFullScreen *)proxy
+{
+    [self showNavigationBar:YES];
+}
 
 #pragma mark - Get
 
