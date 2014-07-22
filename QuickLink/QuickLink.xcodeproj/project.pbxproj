@@ -28,6 +28,7 @@
 		B348047819764B0B007623FD /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047619764B0A007623FD /* ASOBounceButtonView.m */; };
 		B348047C19765347007623FD /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047B19765347007623FD /* ASOTwoStateButton.m */; };
 		B348047F19765A6F007623FD /* BounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B348047E19765A6F007623FD /* BounceButtonView.m */; };
+		B3752C8C197E96230002AEEF /* YH_Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3752C8B197E96230002AEEF /* YH_Utils.m */; };
 		B37C63B8197429460001404D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C6337197429460001404D /* AppDelegate.m */; };
 		B37C63B9197429460001404D /* HttpEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C633A197429460001404D /* HttpEngine.m */; };
 		B37C63BA197429460001404D /* SystemStart.m in Sources */ = {isa = PBXBuildFile; fileRef = B37C633C197429460001404D /* SystemStart.m */; };
@@ -138,6 +139,8 @@
 		B348047B19765347007623FD /* ASOTwoStateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOTwoStateButton.m; sourceTree = "<group>"; };
 		B348047D19765A6F007623FD /* BounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceButtonView.h; sourceTree = "<group>"; };
 		B348047E19765A6F007623FD /* BounceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceButtonView.m; sourceTree = "<group>"; };
+		B3752C8A197E96230002AEEF /* YH_Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YH_Utils.h; sourceTree = "<group>"; };
+		B3752C8B197E96230002AEEF /* YH_Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YH_Utils.m; sourceTree = "<group>"; };
 		B37C6336197429460001404D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B37C6337197429460001404D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B37C6339197429460001404D /* HttpEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpEngine.h; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				B37C6340197429460001404D /* YH_PersistenceEngine.m */,
 				B37C6341197429460001404D /* YH_PushMessageEngine.h */,
 				B37C6342197429460001404D /* YH_PushMessageEngine.m */,
+				B3752C8A197E96230002AEEF /* YH_Utils.h */,
+				B3752C8B197E96230002AEEF /* YH_Utils.m */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 			files = (
 				B37C63C6197429460001404D /* AFURLSessionManager.m in Sources */,
 				B389A9C7197569AD00F85A0E /* FAAnimationBounces.m in Sources */,
+				B3752C8C197E96230002AEEF /* YH_Utils.m in Sources */,
 				B37C63DB197429460001404D /* TransformationMatrix.cpp in Sources */,
 				B37C63B8197429460001404D /* AppDelegate.m in Sources */,
 				B389A9CF197569AD00F85A0E /* UIControl+FastAnimation.m in Sources */,
