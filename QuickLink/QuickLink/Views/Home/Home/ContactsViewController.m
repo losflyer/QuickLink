@@ -10,7 +10,7 @@
 #import "ContactsEntities.h"
 #import "ContactsCell.h"
 
-@interface ContactsViewController () <UITabBarControllerDelegate, UITableViewDataSource>
+@interface ContactsViewController () <UITableViewDelegate, UITableViewDataSource>
 {
     NSString *cellIdentifier;
 }
@@ -94,5 +94,14 @@
     cell.departmentLabel.text = info.department;
  
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    ContactsEntities *info  = [self.contactsArray objectAtIndex:indexPath.row];
+    [YH_Utils callByPhoneNumer:info.number];
+    
 }
 @end
