@@ -9,6 +9,7 @@
 #import "SystemStart.h"
 #import "YH_SetConfig.h"
 #import "SystemConfig.h"
+#import "MobClick.h"
 
 
 @implementation SystemStart
@@ -29,6 +30,7 @@
 //同步启动
 +(BOOL)SystemStartBySync
 {
+    [SystemStart registThirdPart];
     [SystemStart processRunTime];
     [SystemStart handleNumberOfRunning];
     
@@ -38,6 +40,15 @@
     
     return YES;
 }
+
+
++(void)registThirdPart
+{
+    [MobClick startWithAppkey:@"539ef72c56240bab4f00a006" reportPolicy:BATCH channelId:nil];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+}
+
 +(void)getContacts
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"csv"];

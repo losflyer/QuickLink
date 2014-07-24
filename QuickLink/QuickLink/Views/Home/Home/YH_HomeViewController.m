@@ -15,7 +15,7 @@
 #import "ContactsViewController.h"
 #import "CallRecordViewController.h"
 #import "SettingViewController.h"
-
+#define kButtonJumpDistance 70
 @interface YH_HomeViewController () < ASOBounceButtonViewDelegate, NJKScrollFullscreenDelegate>
 {
     BOOL isTop;
@@ -65,7 +65,6 @@
     
     _scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self]; // UIScrollViewDelegate and UITableViewDelegate methods proxy to ViewController
     self.callRecordVC.callrecordTable.delegate = (id)_scrollProxy;
-//    self.tableView.; // cast for surpress incompatible warnings
     _scrollProxy.delegate = self;
     
     {//jumpMenu
@@ -161,7 +160,7 @@
     POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
     
     CGPoint point =  self.menuButton.center;
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 60)];
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - kButtonJumpDistance)];
     //弹性值
     springAnimation.springBounciness = 20.0;
     //弹性速度
@@ -180,7 +179,7 @@
     POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
     
     CGPoint point =  self.menuButton.center;
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + 60)];
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y + kButtonJumpDistance)];
     //弹性值
     springAnimation.springBounciness = 20.0;
     //弹性速度
@@ -286,11 +285,13 @@
 - (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
 {
     [self moveNavigtionBar:deltaY animated:YES];
+    [self buttonsFall];
 }
 
 - (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
 {
     [self moveNavigtionBar:deltaY animated:YES];
+     [self buttonsJump];
 }
 
 - (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy

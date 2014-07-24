@@ -17,6 +17,8 @@
 		19257DA9196BCE0800390C5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19257D8D196BCE0800390C5D /* CoreData.framework */; };
 		19257DB1196BCE0800390C5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19257DAF196BCE0800390C5D /* InfoPlist.strings */; };
 		19257DB3196BCE0800390C5D /* QuickLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19257DB2196BCE0800390C5D /* QuickLinkTests.m */; };
+		19A1AEA5197F5D9F0038AA86 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A1AEA4197F5D9F0038AA86 /* libz.dylib */; };
+		19A1AEA6197F5E920038AA86 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A1AEA0197F5CEC0038AA86 /* libMobClickLibrary.a */; };
 		19B2CA9B197D03FA00FE3838 /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */; };
 		19CC04FC197E628B00860DAD /* CallRecordEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CC04FB197E628B00860DAD /* CallRecordEntities.m */; };
 		B308884A197BD62C00A50559 /* YH_SetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B3088849197BD62C00A50559 /* YH_SetConfig.m */; };
@@ -116,6 +118,10 @@
 		19257DAE196BCE0800390C5D /* QuickLinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickLinkTests-Info.plist"; sourceTree = "<group>"; };
 		19257DB0196BCE0800390C5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19257DB2196BCE0800390C5D /* QuickLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLinkTests.m; sourceTree = "<group>"; };
+		19A1AEA0197F5CEC0038AA86 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		19A1AEA1197F5CEC0038AA86 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		19A1AEA2197F5CEC0038AA86 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		19A1AEA4197F5D9F0038AA86 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		19B2CA99197D03FA00FE3838 /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
 		19B2CA9A197D03FA00FE3838 /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
 		19CC04FA197E628B00860DAD /* CallRecordEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordEntities.h; sourceTree = "<group>"; };
@@ -290,6 +296,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A1AEA6197F5E920038AA86 /* libMobClickLibrary.a in Frameworks */,
+				19A1AEA5197F5D9F0038AA86 /* libz.dylib in Frameworks */,
 				19257D8A196BCE0800390C5D /* CoreGraphics.framework in Frameworks */,
 				19257D8E196BCE0800390C5D /* CoreData.framework in Frameworks */,
 				19257D8C196BCE0800390C5D /* UIKit.framework in Frameworks */,
@@ -333,6 +341,7 @@
 		19257D86196BCE0800390C5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19A1AEA4197F5D9F0038AA86 /* libz.dylib */,
 				19257D87196BCE0800390C5D /* Foundation.framework */,
 				19257D89196BCE0800390C5D /* CoreGraphics.framework */,
 				19257D8B196BCE0800390C5D /* UIKit.framework */,
@@ -358,6 +367,16 @@
 				19257DAF196BCE0800390C5D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19A1AE9F197F5CEC0038AA86 /* UMAnalytics_Sdk_3.1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				19A1AEA0197F5CEC0038AA86 /* libMobClickLibrary.a */,
+				19A1AEA1197F5CEC0038AA86 /* MobClick.h */,
+				19A1AEA2197F5CEC0038AA86 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMAnalytics_Sdk_3.1.2;
 			sourceTree = "<group>";
 		};
 		19B2CA98197D03FA00FE3838 /* DKCircleButton */ = {
@@ -431,6 +450,7 @@
 		B37C6343197429460001404D /* Dependences */ = {
 			isa = PBXGroup;
 			children = (
+				19A1AE9F197F5CEC0038AA86 /* UMAnalytics_Sdk_3.1.2 */,
 				19B2CA98197D03FA00FE3838 /* DKCircleButton */,
 				B348047919765347007623FD /* TwoStateButton */,
 				B348047419764B0A007623FD /* BounceButton */,
@@ -1004,6 +1024,10 @@
 				);
 				INFOPLIST_FILE = "QuickLink/QuickLink-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLink/Dependences/UMAnalytics_Sdk_3.1.2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1023,6 +1047,10 @@
 				);
 				INFOPLIST_FILE = "QuickLink/QuickLink-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickLink/Dependences/UMAnalytics_Sdk_3.1.2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
